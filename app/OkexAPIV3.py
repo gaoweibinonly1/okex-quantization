@@ -16,7 +16,7 @@ class OkexAPIV3(object):
 
     def get_ticker_price(self,market):
         res = self.spotAPI.get_specific_ticker(market)
-        best_ask = res['best_ask']
+        best_ask = res['data'][0]['askPx']
         print(best_ask)
         time.sleep(2)
         return float(best_ask)

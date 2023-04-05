@@ -53,7 +53,7 @@ SPOT_GET_ORDER_ALGOS = '/api/spot/v3/algo'
 SPOT_COIN_INFO = '/api/spot/v3/instruments'
 SPOT_DEPTH = '/api/spot/v3/instruments/'
 SPOT_TICKER = '/api/spot/v3/instruments/ticker'
-SPOT_SPECIFIC_TICKER = '/api/spot/v3/instruments/'
+SPOT_SPECIFIC_TICKER = '/api/v5/market/ticker?instId='
 SPOT_DEAL = '/api/spot/v3/instruments/'
 SPOT_KLINE = '/api/spot/v3/instruments/'
 

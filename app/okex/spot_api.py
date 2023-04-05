@@ -155,8 +155,7 @@ class SpotAPI(Client):
 
     # query specific ticker
     def get_specific_ticker(self, instrument_id):
-        return self._request_without_params(GET, SPOT_SPECIFIC_TICKER + str(instrument_id) + '/ticker')
-
+        return self._request_without_params(GET, SPOT_SPECIFIC_TICKER + str(instrument_id))
     def get_deal(self, instrument_id, limit=''):
         params = {}
         if limit:
