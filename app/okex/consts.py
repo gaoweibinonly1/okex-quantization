@@ -38,7 +38,7 @@ COIN_FEE = '/api/account/v3/withdrawal/fee'
 SPOT_ACCOUNT_INFO = '/api/spot/v3/accounts'
 SPOT_COIN_ACCOUNT_INFO = '/api/spot/v3/accounts/'
 SPOT_LEDGER_RECORD = '/api/spot/v3/accounts/'
-SPOT_ORDER = '/api/spot/v3/orders'
+SPOT_ORDER = '/api/v5/trade/orders' # 下单
 SPOT_ORDERS = '/api/spot/v3/batch_orders'
 SPOT_REVOKE_ORDER = '/api/spot/v3/cancel_orders/'
 SPOT_REVOKE_ORDERS = '/api/spot/v3/cancel_batch_orders/'
@@ -53,7 +53,7 @@ SPOT_GET_ORDER_ALGOS = '/api/spot/v3/algo'
 SPOT_COIN_INFO = '/api/spot/v3/instruments'
 SPOT_DEPTH = '/api/spot/v3/instruments/'
 SPOT_TICKER = '/api/spot/v3/instruments/ticker'
-SPOT_SPECIFIC_TICKER = '/api/v5/market/ticker?instId='
+SPOT_SPECIFIC_TICKER = '/api/v5/market/ticker?instId=' # 当前价格
 SPOT_DEAL = '/api/spot/v3/instruments/'
 SPOT_KLINE = '/api/spot/v3/instruments/'
 

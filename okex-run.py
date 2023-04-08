@@ -34,6 +34,7 @@ class Run_Main():
             if grid_buy_price >= cur_market_price:   # 是否满足买入价
                 try:
                     print("满足条件，开始买入{}:{}".format(self.coinType, grid_buy_price))
+                    # 买入逻辑
                     result = okex.buy_limit(self.coinType, quantity, grid_buy_price, client_oid, cur_market_price)
                     print("买入结果：{}".format(result))
                     if result['order_id'] != '-1':
@@ -74,16 +75,16 @@ class Run_Main():
                 print("当前市价：{market_price}。未能满足交易,继续运行".format(market_price = cur_market_price))
 
 
-if __name__ == "__main__":
-    instance = Run_Main()
-    try:
-        instance.loop_run()
-    except Exception as e:
-        print(e)
-        error_info = "报警：币种{coin},服务停止,原因：{message}".format(coin=instance.coinType, message = e)
-        instance.message.dingding_warn(error_info)
+# if __name__ == "__main__":
+#     instance = Run_Main()
+#     try:
+#         instance.loop_run()
+#     except Exception as e:
+#         print(e)
+#         error_info = "报警：币种{coin},服务停止,原因：{message}".format(coin=instance.coinType, message = e)
+#         instance.message.dingding_warn(error_info)
 
 # 调试看报错运行下面，正式运行用上面
-# if __name__ == "__main__":
-    # instance = Run_Main()
-    # instance.loop_run()
+if __name__ == "__main__":
+    instance = Run_Main()
+    instance.loop_run()
